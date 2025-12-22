@@ -71,6 +71,34 @@ interface MovieDetails {
   vote_count: number;
 }
 
+interface Cast {
+  id: number;
+  name: string;
+  character: string;
+  profile_path: string | null;
+  order: number;
+}
+
+interface Review {
+  id: string;
+  author: string;
+  author_details: {
+    name: string;
+    username: string;
+    avatar_path: string | null;
+    rating: number | null;
+  };
+  content: string;
+  created_at: string;
+  updated_at: string;
+  url: string;
+}
+
+interface Genre {
+  id: number;
+  name: string;
+}
+
 interface TrendingCardProps {
   movie: TrendingMovie;
   index: number;
